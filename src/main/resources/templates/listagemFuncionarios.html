@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Funcionários</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/list.css}">
+</head>
+<body>
+
+<div class="menu">
+    <img src="../static/logo.png" alt="" class="logo-img">
+    <div class="nav">
+        <a class="nav-link" th:href="@{/}">Home</a>
+        <a class="nav-link" th:href="@{/cadastro}">Cadastro</a>
+        <a class="nav-link" th:href="@{/listagem}">Listagem</a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="submain">
+        <h2>Listagem de Funcionários</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Cargo</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="funcionario : ${funcionarios}">
+                <td th:text="${funcionario.matricula}"></td>
+                <td th:text="${funcionario.nome}"></td>
+                <td th:text="${funcionario.email}"></td>
+                <td th:text="${funcionario.telefone}"></td>
+                <td th:text="${funcionario.cargo}"></td>
+                <td class="acoes">
+                    <a th:href="@{'/atualizar/' + ${funcionario.matricula}}" >Atualizar</a>
+                    <a th:href="@{'/excluir/' + ${funcionario.matricula}}" class="excluir">Excluir</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a th:href="@{/FuncionariosForm}" class="novo-funcionario">Novo Funcionário</a>
+    </div>
+
+    <div class="sub2main">
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Funcionário</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h2>Detalhes do Funcionário</h2>
+
+<table>
+  <tr>
+    <th>Matrícula</th>
+    <td th:text="${funcionario.matricula}"></td>
+  </tr>
+  <tr>
+    <th>Nome</th>
+    <td th:text="${funcionario.nome}"></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td th:text="${funcionario.email}"></td>
+  </tr>
+  <tr>
+    <th>Telefone</th>
+    <td th:text="${funcionario.telefone}"></td>
+  </tr>
+  <tr>
+    <th>Cargo</th>
+    <td th:text="${funcionario.cargo}"></td>
+  </tr>
+</table>
+
+<a th:href="@{/funcionarios}">Voltar para Listagem</a>
+
+</body>
+</html>

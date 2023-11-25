@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Opcoes</title>
+    <link rel="stylesheet" th:href="@{/sucess.css}">
+</head>
+<body>
+<div class="menu">
+    <img th:src="@{/img/logo.png}" alt="">
+    <div class="nav">
+        <a class="nav-link" th:href="@{/}">Home</a>
+        <a class="nav-link" th:href="@{/cadastro}">Cadastre</a>
+        <a class="nav-link" th:href="@{/listagem}">Listagem</a>
+    </div>
+</div>
+<div class="main">
+    <div class="content-con">
+        <h1 class="tittle">Opções de <a class="letter-color">Listagem</a></h1>
+        <p>Escolha abaixo o tipo de tabela que deseja acessar:</p>
+        <br>
+        <a th:href="@{/ListarFuncionarios}">
+            <button class="bot_link">Tabela Funcionário</button>
+        </a>
+        <!--<a th:href="@{/listagemVeiculos}">
+            <button class="bot_link">Tabela Veículo</button>
+        </a>-->
+    </div>
+</div>
+</body>
+</html>

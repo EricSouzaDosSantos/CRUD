@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opcoes de Cadastros</title>
+    <link rel="stylesheet" th:href="@{/sucess.css}">
+</head>
+<body>
+<div class="menu">
+    <img th:src="@{/img/logo.png}" alt="">
+    <div class="nav">
+        <a class="nav-link" th:href="@{/}">Home</a>
+        <a class="nav-link" th:href="@{/cadastro}">Cadastre</a>
+        <a class="nav-link" th:href="@{/listagem}">Listagem</a>
+    </div>
+</div>
+<div class="main">
+    <div class="content-con">
+        <h1 class="tittle">Opções de <a class="letter-color">Cadastros</a></h1>
+        <p>Escolha abaixo o tipo de cadastro que deseja efetuar:</p>
+        <br>
+        <a th:href="@{/FuncionariosForm}">
+            <button class="bot_link">Funcionário</button>
+        </a>
+        <!--<a th:href="@{/cadastroVeiculos}">
+            <button class="bot_link">Veículo</button>
+        </a>-->
+    </div>
+</div>
+</body>
+</html>

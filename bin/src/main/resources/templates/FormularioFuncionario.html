@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Funcionário</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h2>Formulário de Funcionário</h2>
+
+<form th:object="${funcionario}" th:action="@{/funcionarios/salvar}" method="post">
+  <label>Nome: <input type="text" th:field="*{nome}" required></label><br>
+  <label>Email: <input type="text" th:field="*{email}" required></label><br>
+  <label>Telefone: <input type="text" th:field="*{telefone}" required></label><br>
+  <label>Cargo: <input type="text" th:field="*{cargo}" required></label><br>
+  <button type="submit">Salvar</button>
+</form>
+
+<a th:href="@{/funcionario}">Voltar para Listagem</a>
+
+</body>
+</html>

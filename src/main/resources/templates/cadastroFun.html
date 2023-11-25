@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionarios</title>
+
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="menu">
+    <img th:src="@{/static/img/logo.png}" alt="" class="logo-img">
+    <div class="nav">
+        <a class="nav-link" th:href="@{/}">Home</a>
+        <a class="nav-link" th:href="@{/cadastro}">Cadastro</a>
+        <a class="nav-link" th:href="@{/listagem}">Listagem</a>
+    </div>
+</div>
+<div class="main">
+    <div class="submain">
+        <div class="form-fundo2">
+            <img th:src="@{/img/logo-cad.png}" alt="" class="cad-img">
+            <form th:object="${funcionario}" th:action="@{/salvar}" method="post">
+
+                <div class="form-control">
+                    <input class="form-input" type="text" th:field="*{nome}" id="nome" required>
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="form-control">
+                    <input class="form-input" type="email" th:field="*{email}" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-control">
+                    <input class="form-input" type="text" th:field="*{telefone}" id="telefone" required>
+                    <label for="telefone">Telefone</label>
+                </div>
+                <div class="form-control">
+                    <input class="form-input" type="text" th:field="*{cargo}" id="cargo" required>
+                    <label for="cargo">Cargo</label>
+                </div>
+                <div class="form-control">
+                    <button class="button-conf" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sub2main">
+        <img th:src="@{/img/carro.png}" alt="" class="carro-img">
+    </div>
+</div>
+
+</body>
+</html>

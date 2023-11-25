@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Funcionários</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h2>Listagem de Funcionários</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Matrícula</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Cargo</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="funcionario : ${funcionarios}">
+        <td th:text="${funcionario.matricula}"></td>
+        <td th:text="${funcionario.nome}"></td>
+        <td th:text="${funcionario.email}"></td>
+        <td th:text="${funcionario.telefone}"></td>
+        <td th:text="${funcionario.cargo}"></td>
+        <td>
+            <a th:href="@{/funcionarios/{matricula}(matricula=${funcionario.matricula})}">Detalhes</a>
+            <a th:href="@{/funcionarios/excluir/{matricula}(matricula=${funcionario.matricula})}" class="excluir">Excluir</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/funcionarios/formulario}">Novo Funcionário</a>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            background-color: #8E0F16;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            max-width: 100px;
+            max-height: 50px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.2vw;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .submain {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        h2 {
+            color: #8E0F16;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #8E0F16;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .acoes a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .acoes a.excluir {
+            color: #dc3545;
+        }
+
+        .novo-funcionario {
+            display: inline-block;
+            background-color: #8E0F16;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.2vw;
+        }
+
+        .novo-funcionario:hover {
+            background-color: #6f0e13;
+        }
